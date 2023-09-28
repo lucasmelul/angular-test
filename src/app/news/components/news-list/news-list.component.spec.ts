@@ -15,6 +15,7 @@ import { NewsService } from 'src/app/shared/services/news.service';
 import { of, BehaviorSubject, Observable } from 'rxjs';
 import { PageEvent } from '@angular/material/paginator';
 import dataNews from '../../../../assets/dataNews.json';
+import { RouterTestingModule } from '@angular/router/testing';
 
 class NewsServiceStub {
   news$: Observable<any>;
@@ -35,7 +36,8 @@ fdescribe('NewsListComponent', () => {
         CommonModule,
         ReactiveFormsModule,
         SharedModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterTestingModule
       ],
       schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],
       providers: [

@@ -46,11 +46,11 @@ fdescribe('NewsService', () => {
     it('should execute get all without params', fakeAsync(() => {
       if(!service || !httpMock) return
 
-      const result: any[] = [dataNew];
+      const result: any[] = dataNews.articles;
       const endpoint = `${environment.apiUrl}/top-headlines?apiKey=${environment.apiKey}&language=en&`
       
       service.getNews().subscribe((response: any) => {
-        const [data] = result
+        const data = result
         expect(response).toEqual(data);
       })
 
@@ -62,16 +62,16 @@ fdescribe('NewsService', () => {
     it('should execute get query param', () => {
       if(!service || !httpMock) return
 
-      const result: any[] = [dataNew];
+      const result: any[] = dataNews.articles;
       const queryParams = {
         q: 'work',
         page: 1,
         pageSize: 7
       } 
-      const endpoint = `${environment.apiUrl}/top-headlines?apiKey=${environment.apiKey}&language=en&page=${queryParams.page}&pageSize=${queryParams.pageSize}&q=${queryParams.q}`
+      const endpoint = `${environment.apiUrl}/top-headlines?apiKey=${environment.apiKey}&language=en&q=${queryParams.q}&page=${queryParams.page}&pageSize=${queryParams.pageSize}`
 
       service.getNews(queryParams).subscribe((response: any) => {
-        const [data] = result
+        const data = result
         expect(response).toEqual(data);
       })
 

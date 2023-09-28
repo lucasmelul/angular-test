@@ -1,0 +1,13 @@
+<div class="new-detail-container">
+  <div class="breadcumbs">
+    <a (click)="goBack()">Volver</a>
+  </div>
+  <div *ngIf="new" class="new-detail-content">
+    <h1 class="new-detail-title">{{new.title}}</h1>
+    <p *ngIf="new.author" class="new-detail-subtitle">Autor: {{new.author}}</p>
+    <img class="new-detail-image" [src]="new.urlToImage" [alt]="new.title">
+    <div class="new-detail-content">
+      <p class="new-detail-text">{{new.description}}</p>
+    </div>
+  </div>
+</div>

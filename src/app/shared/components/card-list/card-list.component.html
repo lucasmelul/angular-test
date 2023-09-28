@@ -1,0 +1,12 @@
+<section class="section-container">
+  <h2 *ngIf="title" class="section-title">{{title | titlecase}}</h2>
+  <div class="card-list-container" *ngIf="news">
+    <div class="news-list-card" *ngFor="let new of news">
+      <app-card 
+        [new]="new"
+        [showContent]="false"
+      ></app-card>
+    </div>
+  </div>
+  `p
+</section>

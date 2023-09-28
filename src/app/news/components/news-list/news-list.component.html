@@ -1,0 +1,16 @@
+<section class="section-container">
+  <div *ngIf="query" class="breadcumbs">
+    <a routerLink="/">Volver a la Home</a>
+    <h2 class="section-title">Búsqueda: {{query | titlecase}}</h2>
+  </div>
+  <h2 *ngIf="category" class="section-title">{{category | titlecase}}</h2>
+  <div class="news-list-container" [ngClass]="{'search-container': !!query, 'category': !!category}" *ngIf="news$ | async as news">
+    <div class="news-list-card" *ngFor="let new of news">
+      <app-card 
+        [new]="new"
+        [showContent]="true"
+      ></app-card>
+    </div>
+  </div>
+</section>
+<app-loading>

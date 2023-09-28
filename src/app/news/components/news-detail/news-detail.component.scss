@@ -1,0 +1,50 @@
+
+.new-detail-container {
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: calc(100vh - 150px);
+
+  .new-detail-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .breadcumbs {
+    margin: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .new-detail-image {
+    display: block;
+    object-fit: cover;
+    max-width: 600px;
+    min-height: 200px;
+    align-self: center;
+  }
+
+  .new-detail-content {
+    padding: 10px 15px 0;
+
+    .new-detail-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .new-detail-text {
+      font-size: 16px;
+      padding: 20px;
+    }
+
+    .new-detail-subtitle {
+      font-size: 12px;
+      font-style: italic;
+      font-weight: 300;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+}

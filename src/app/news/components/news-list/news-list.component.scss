@@ -1,0 +1,46 @@
+.section-container{
+  
+  .section-title {
+    margin: 30px 15px 10px;
+  }
+  
+  .breadcumbs {
+    color: black;
+    margin: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .news-list-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  
+    &.category {
+      display: flex;
+      overflow-x: scroll;
+  
+      .news-list-card {
+        min-width: 200px;
+        margin: 0 10px;
+        min-height: 400px;
+      }
+    }
+
+    &.search-container {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .news-list-card {
+        width: 100%;
+        margin: 10px;
+      }
+    }
+  
+  }
+}
+

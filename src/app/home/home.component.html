@@ -1,0 +1,16 @@
+<div class="home-container">
+  <section class="main-container">
+    <div class="main-content" *ngIf="news$ | async as news">
+      <div class="news-list-card" *ngFor="let new of news">
+        <app-card 
+          [new]="new"
+          [showContent]="true"
+        ></app-card>
+      </div>
+    </div>
+  </section>
+  <section class="section-container" *ngFor="let category of categories">
+    <app-news-list [category]="category"></app-news-list>
+  </section>
+</div>
+<app-loading>

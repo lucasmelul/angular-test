@@ -1,0 +1,8 @@
+<div (click)="goToNewDetail()" class="card-container">
+  <img class="card-image" [src]="new.urlToImage" [alt]="new.title">
+  <div class="card-content">
+    <h3 class="card-title">{{new.title}}</h3>
+    <p *ngIf="showContent" class="card-text">{{new.description}}</p>
+    <p *ngIf="new.author" class="card-subtitle">Autor: {{new.author}}</p>
+  </div>
+</div>

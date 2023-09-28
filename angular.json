@@ -34,8 +34,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "serviceWorker": true
+            "scripts": []
           },
           "configurations": {
             "production": {

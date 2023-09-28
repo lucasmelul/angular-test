@@ -8,7 +8,8 @@
     <div class="news-list-card" *ngFor="let new of news">
       <app-card 
         [new]="new"
-        [showContent]="true"
+        [showContent]="!category"
+        [compact]="!!category"
       ></app-card>
     </div>
   </div>

@@ -1,4 +1,4 @@
-<div (click)="goToNewDetail()" class="card-container">
+<div (click)="goToNewDetail()" class="card-container" [ngClass]="{'compact': compact}">
   <img class="card-image" [src]="new.urlToImage" [alt]="new.title">
   <div class="card-content">
     <h3 class="card-title">{{new.title}}</h3>

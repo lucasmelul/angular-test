@@ -1,8 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 import { NewsService } from 'src/app/shared/services/news.service';
 import { New } from '../../models/news.model';
 
@@ -14,15 +11,9 @@ import { New } from '../../models/news.model';
 export class CardComponent {
   @Input() new: New
   @Input() showContent: boolean = true
+  @Input() compact: boolean = false
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-  
   constructor(
-    private breakpointObserver: BreakpointObserver,
     private router: Router,
     private newsService: NewsService
   ) {}

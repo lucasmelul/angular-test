@@ -8,9 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "sw": "sw-precache --root=dist --config=sw-precache-config.js",
-    "static-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html",
-    "start-offline": "ng build && npm run sw && npm run static-serve"
+    "start-offline": "ng build --prod && cd dist && http-server -p 4200"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +22,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@angular/service-worker": "~13.0.0",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -42,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
     "eslint": "^8.2.0",
+    "http-server": "^14.1.1",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
